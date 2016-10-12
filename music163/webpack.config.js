@@ -45,11 +45,11 @@ module.exports = {
         new CleanWebpackPlugin(['prd']),
         extractSCSS,
         //js文件的压缩
-        // new webpack.optimize.UglifyJsPlugin({
-        //     compress: {
-        //         warnings: false
-        //     }
-        // }),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            }
+        }),
         // 根据文件内容生成 MD5
         // new WebpackMd5Hash(),
         new ProgressPlugin(function(percentage, msg) {

@@ -11,8 +11,11 @@
     "clean-webpack-plugin": "^0.1.12",
     "css-loader": "^0.25.0",
     "extract-text-webpack-plugin": "^1.0.1",
-    "jquery": "^3.1.1",
     "webpack": "^1.13.2",
     "webpack-md5-hash": "0.0.5"
+  },
+  "dependencies": {
+    "hogan": "^1.0.2",
+    "jquery": "^3.1.1"
   }
 }

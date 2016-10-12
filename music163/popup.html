@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Qunar短链接服务</title>
-    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Music163sort</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <style type="text/css">
       .container {
         width: 800px;
@@ -13,28 +15,27 @@
 <body>
     <div class="container">
         <div class="panel panel-default">
-          <div class="panel-heading">长链接转短链接</div>
-          <div class="panel-body">
-              <div class="form-group">
-                  <label for="handle-link">长链接地址</label>
-                  <input type="text" class="form-control" id="handle-link" placeholder="链接地址">
-              </div>
-              <div class="form-group">
-                  <label for="short-link">短链接地址</label>
-                  <input type="text" class="form-control disabled" id="short-link">
-              </div>
-              <button type="submit" class="btn btn-success js-convert-short">转换</button>
-          </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-2">
+                        <input type="text" class="form-control" value="0" id="start" placeholder="从第几页" />
+                    </div>
+                    <div class="col-xs-2">
+                        <input type="text" class="form-control" value="42" id="end" placeholder="到第几页" />
+                    </div>
+                    <div class="col-xs-2">
+                        <button type="button" class="btn btn-default" id="js-btn-sort">开始排序</button>
+                    </div>
+                </div>
+            </div>
         </div>
-
+        
         <div class="panel panel-default">
-          <div class="panel-heading">获取跳转APP的链接</div>
-          <div class="panel-body">
-              <button type="submit" class="btn btn-success js-gen-app-link">生成链接</button>
-          </div>
+            <div class="panel-body" id="js-song-list">
+                
+            </div>
         </div>
     </div>
-    <script src="jquery-1.7.2.js"></script>
-    <script src="popup.js"></script>
+    <script src="prd/index.js"></script>
 </body>
 </html>

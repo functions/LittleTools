@@ -24,11 +24,11 @@ function getCurPageList() {
 }
 
 // 翻页并获取每页列表中的所有歌单详情
-function switchPage() {
+function switchPage(cb) {
   if(curPage > _end) {
     // 对收集的结果进行排序
     var orderArr = quickOrder(allList, 'desc', 'nb');
-    console.log(orderArr);
+    cb(orderArr);
     return;
   }
   document.querySelector('#g_iframe').contentWindow.document.querySelector('.zbtn.znxt').click();
@@ -37,7 +37,7 @@ function switchPage() {
       console.log(curPage);
       getCurPageList();
       curPage++;
-      switchPage();
+      switchPage(cb);
     });
   }, 300)
 }
@@ -55,10 +55,10 @@ function isLoaded(cb) {
 }
 
 
-module.exports = function(start, end) {
+module.exports = function(start, end, cb) {
   _start = start;
   _end = end;
   curPage = _start;
   allList = [];
-  switchPage();
+  switchPage(cb);
 }
