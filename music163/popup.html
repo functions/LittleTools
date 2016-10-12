@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Qunar短链接服务</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <style type="text/css">
+      .container {
+        width: 800px;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="panel panel-default">
+          <div class="panel-heading">长链接转短链接</div>
+          <div class="panel-body">
+              <div class="form-group">
+                  <label for="handle-link">长链接地址</label>
+                  <input type="text" class="form-control" id="handle-link" placeholder="链接地址">
+              </div>
+              <div class="form-group">
+                  <label for="short-link">短链接地址</label>
+                  <input type="text" class="form-control disabled" id="short-link">
+              </div>
+              <button type="submit" class="btn btn-success js-convert-short">转换</button>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">获取跳转APP的链接</div>
+          <div class="panel-body">
+              <button type="submit" class="btn btn-success js-gen-app-link">生成链接</button>
+          </div>
+        </div>
+    </div>
+    <script src="jquery-1.7.2.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>
